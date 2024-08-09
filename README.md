@@ -1,7 +1,7 @@
 # Notes / Todo
 
 - [x] smooth scroll
-- [ ] flip up navbar elements
+- [x] flip up navbar elements
 - [ ] scroll change bg color immediately
 - [ ] text light up with scroll
 - [ ] elements fade in and out
