@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import Nav from "./_components/nav";
 
 async function createLocomotiveScroll() {
   const LocomotiveScroll = (await import("locomotive-scroll")).default;
@@ -12,11 +13,8 @@ export default function Home() {
   }, []);
   return (
     <main>
-      <div className="flex flex-col gap-4">
-        <div className="h-screen w-full bg-orange-400"></div>
-        <div className="h-screen w-full bg-orange-400"></div>
-        <div className="h-screen w-full bg-orange-400"></div>
-      </div>
+      <Nav />
+      <div className="flex flex-col gap-4"></div>
     </main>
   );
 }

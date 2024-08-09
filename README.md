@@ -1,6 +1,6 @@
 # Notes / Todo
 
-- [ ] smooth scroll
+- [x] smooth scroll
 - [ ] flip up navbar elements
 - [ ] scroll change bg color immediately
 - [ ] text light up with scroll
@@ -18,4 +18,18 @@
 - [ ] static background image ?
 - [ ] glow elements (blurs)
 - [ ] bento grid ig
+- [ ] sticky footer
 - [ ]
+
+---
+
+sections:
+hero
+technologies
+projects
+contact
+
+header:
+projects
+resume
+contact
