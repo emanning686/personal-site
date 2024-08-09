@@ -5,7 +5,7 @@
 - [ ] text light up with scroll
 - [ ] elements fade in and out
 - [ ] projects section --- needs something ---
-- [ ] custom cursor
+- [ ] custom cursor (smooth)
 - [ ] technologies magnet/sticky
 - [ ] react-typed
 - [ ] burger - x animation button
@@ -14,4 +14,7 @@
 - [ ] loading page - maybe animated text with scroll, or just slight delay before going away
 - [ ] scroll parallax entire page
 - [ ] horizontal constant slide element / slide linked to scroll
+- [ ] static background image ?
+- [ ] glow elements (blurs)
+- [ ] bento grid ig
 - [ ]
