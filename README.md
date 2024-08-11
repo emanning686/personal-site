@@ -2,12 +2,12 @@
 
 - [x] smooth scroll
 - [x] flip up navbar elements
-- [ ] scroll change bg color immediately
+- [x] scroll change bg color immediately
 - [ ] text light up with scroll
 - [ ] elements fade in and out
-- [ ] projects section --- needs something ---
-- [ ] custom cursor (smooth)
 - [ ] technologies magnet/sticky
+- [ ] projects section --- needs something \*bento grid maybe ---
+- [ ] custom cursor (smooth)
 - [ ] react-typed
 - [ ] burger - x animation button
 - [ ] navbar stays at top and button pops in after scroll
@@ -19,6 +19,7 @@
 - [ ] glow elements (blurs)
 - [ ] bento grid ig
 - [ ] sticky footer
+- [ ] page transitions
 - [ ]
 
 ---
