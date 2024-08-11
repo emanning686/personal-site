@@ -15,7 +15,7 @@
 - [ ] parallax elements
 - [ ] loading page - maybe animated text with scroll, or just slight delay before going away
 - [ ] scroll parallax entire page
-- [ ] horizontal constant slide element / slide linked to scroll
+- [ ] horizontal constant slide element / slide linked to scroll -- framer scroll velocity
 - [ ] static background image ?
 - [ ] glow elements (blurs)
 - [ ] bento grid ig

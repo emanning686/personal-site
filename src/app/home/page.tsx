@@ -8,16 +8,7 @@ import {
 } from "framer-motion";
 import Nav from "../_components/nav";
 
-async function createLocomotiveScroll() {
-  const LocomotiveScroll = (await import("locomotive-scroll")).default;
-  const locomotiveScroll = new LocomotiveScroll();
-}
-
 export default function Home() {
-  useEffect(() => {
-    createLocomotiveScroll();
-  }, []);
-
   const [start, setStart] = useState(true);
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
@@ -47,6 +38,28 @@ export default function Home() {
 
   return (
     <main ref={ref}>
+      <motion.div
+        className="fixed left-0 top-0 z-10 h-[110vh] w-full bg-[#2b2d46] text-6xl font-bold text-[#d0cae9] md:text-8xl"
+        variants={{
+          initial: {
+            y: 0,
+            borderBottomLeftRadius: "50% 10%",
+            borderBottomRightRadius: "50% 10%",
+          },
+          animate: {
+            y: "-100%",
+            borderBottomLeftRadius: "50% 0%",
+            borderBottomRightRadius: "50% 0%",
+          },
+        }}
+        initial="initial"
+        animate="animate"
+        transition={{ duration: 0.75, delay: 0.1, ease: "easeInOut" }}
+      >
+        <div className="flex h-screen items-center justify-center">
+          <h1>Home</h1>
+        </div>
+      </motion.div>
       <motion.div
         className={"fixed inset-0 -z-20 w-full bg-[url('/bg1.png')] bg-center"}
         variants={{ initial: { opacity: 1 }, animate: { opacity: 0 } }}
