@@ -3,7 +3,8 @@
 - [x] smooth scroll
 - [x] flip up navbar elements
 - [x] scroll change bg color immediately
-- [ ] text light up with scroll
+- [x] text light up with scroll
+- [ ] page transition to home
 - [ ] elements fade in and out
 - [ ] technologies magnet/sticky
 - [ ] projects section --- needs something \*bento grid maybe ---
@@ -19,8 +20,7 @@
 - [ ] glow elements (blurs)
 - [ ] bento grid ig
 - [ ] sticky footer
-- [ ] page transitions
-- [ ]
+- [ ] page transitions everywhere
 
 ---
 
