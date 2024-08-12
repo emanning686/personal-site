@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@motionone/utils": "^10.18.0",
     "eric-manning": "file:",
     "framer-motion": "^11.3.24",
     "lenis": "^1.1.9",

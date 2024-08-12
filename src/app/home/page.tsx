@@ -7,6 +7,7 @@ import {
   useScroll,
 } from "framer-motion";
 import Nav from "../_components/nav";
+import Hero from "../_components/hero";
 
 export default function Home() {
   const [start, setStart] = useState(true);
@@ -39,7 +40,7 @@ export default function Home() {
   return (
     <main ref={ref}>
       <motion.div
-        className="fixed left-0 top-0 z-10 h-[110vh] w-full bg-[#2b2d46] text-6xl font-bold text-[#d0cae9] md:text-8xl"
+        className="fixed left-0 top-0 z-20 h-[110vh] w-full bg-[#2b2d46] text-6xl font-bold text-[#d0cae9] md:text-8xl"
         variants={{
           initial: {
             y: 0,
@@ -76,9 +77,9 @@ export default function Home() {
       />
       <div className="grid h-screen grid-rows-[auto_1fr]">
         <Nav start={start} />
-        <div className="h-full"></div>
+        <Hero start={start} />
       </div>
-      <div className="h-screen" />
+      <div className="h-screen"></div>
     </main>
   );
 }
