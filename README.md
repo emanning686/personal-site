@@ -4,7 +4,7 @@
 - [x] flip up navbar elements
 - [x] scroll change bg color immediately
 - [x] text light up with scroll
-- [ ] page transition to home
+- [x] page transition to home
 - [ ] elements fade in and out
 - [ ] technologies magnet/sticky
 - [ ] projects section --- needs something \*bento grid maybe ---

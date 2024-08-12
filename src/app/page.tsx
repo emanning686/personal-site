@@ -11,6 +11,7 @@ import {
 } from "framer-motion";
 import { Domine } from "next/font/google";
 import Lenis from "lenis";
+import { HiMiniChevronDoubleDown } from "react-icons/hi2";
 
 const domine = Domine({ subsets: ["latin"] });
 
@@ -72,7 +73,19 @@ export default function Home() {
       <div
         className={`relative w-full bg-[#2b2d46] text-[#d0cae9] ${domine.className}`}
       >
-        <div className="h-[55vh]" />
+        <motion.div
+          className="flex h-[55vh] items-center justify-center text-5xl opacity-10 md:text-7xl"
+          initial={{ y: -10 }}
+          animate={{ y: 10 }}
+          transition={{
+            duration: 1,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut",
+          }}
+        >
+          <HiMiniChevronDoubleDown />
+        </motion.div>
         <div className="flex h-[120vh] flex-col items-center">
           <motion.p
             ref={ref}
