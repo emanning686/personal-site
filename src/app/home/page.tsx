@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <main ref={ref}>
       <motion.div
-        className="fixed left-0 top-0 z-20 h-[110vh] w-full bg-[#2b2d46] text-6xl font-bold text-[#d0cae9] md:text-8xl"
+        className="fixed left-0 top-0 z-30 h-[110vh] w-full bg-[#2b2d46] text-6xl font-bold text-[#d0cae9] md:text-8xl"
         variants={{
           initial: {
             y: 0,
@@ -79,7 +79,7 @@ export default function Home() {
         <Nav start={start} />
         <Hero start={start} />
       </div>
-      <div className="h-screen"></div>
+      <div className="h-screen" />
     </main>
   );
 }

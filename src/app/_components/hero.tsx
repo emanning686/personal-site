@@ -11,6 +11,7 @@ import {
 import { wrap } from "@motionone/utils";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { ReactTyped } from "react-typed";
 
 function ParallaxText({
   children,
@@ -60,7 +61,7 @@ function ParallaxText({
   return (
     <div className="line-h m-0 flex w-full flex-nowrap whitespace-nowrap tracking-widest">
       <motion.div
-        className="line-h flex-nowrap whitespace-nowrap text-7xl font-black text-[#fed8b4] md:text-9xl"
+        className="line-h flex-nowrap whitespace-nowrap text-5xl font-black text-[#fed8b4] md:text-7xl"
         style={{ x }}
       >
         <motion.span
@@ -135,13 +136,20 @@ export default function Hero({ start }: { start: boolean }) {
           alt="Profile picture"
           width={500}
           height={500}
-          className="absolute right-1/2 top-24 z-10 translate-x-1/2 rounded-3xl shadow-2xl shadow-[#715d7e] md:right-36 md:translate-x-0"
+          className="absolute right-1/2 top-32 z-10 translate-x-1/2 scale-75 rounded-3xl shadow-2xl shadow-[#715d7e] md:right-36 md:translate-x-0 md:scale-100"
         />
       </div>
-      <div className="relative z-10 h-full w-full overflow-hidden">
-        <div className="absolute top-[750px] rotate-6 md:top-[1000px]">
+      <div className="absolute -top-48 z-10 h-[200px] w-full overflow-hidden rounded-2xl p-72">
+        <div className="-rotate-6 md:top-[1000px]">
           <ParallaxText baseVelocity={-2} controls={controls}>
-            Eric Manning • Developer
+            Eric Manning • Software Engineering BS Student @ RIT
+          </ParallaxText>
+        </div>
+      </div>
+      <div className="absolute top-[200px] z-10 h-[200px] w-full overflow-hidden rounded-2xl p-96">
+        <div className="rotate-12 md:top-[1000px]">
+          <ParallaxText baseVelocity={2} controls={controls}>
+            Eric Manning • Software Engineering BS Student @ RIT
           </ParallaxText>
         </div>
       </div>

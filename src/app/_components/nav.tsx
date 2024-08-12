@@ -15,7 +15,7 @@ export default function Nav({ start }: { start: boolean }) {
 
   return (
     <motion.div
-      className="flex h-20 w-full items-center justify-between px-4 text-3xl font-light opacity-0 md:opacity-100"
+      className="z-20 flex h-20 w-full items-center justify-between px-4 text-3xl font-light opacity-0 md:opacity-100"
       variants={{
         initial: { backgroundColor: "#2b2d46", color: "#d7d6ce" },
         animate: { backgroundColor: "#ffffff", color: "#2b2d46" },
