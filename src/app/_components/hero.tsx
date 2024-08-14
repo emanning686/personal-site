@@ -139,20 +139,20 @@ export default function Hero({ start }: { start: boolean }) {
           className="absolute right-1/2 top-32 z-10 translate-x-1/2 scale-75 rounded-3xl shadow-2xl shadow-[#715d7e] md:right-36 md:translate-x-0 md:scale-100"
         />
       </div>
-      {/* <div className="absolute -top-48 z-10 h-[200px] w-full overflow-hidden rounded-2xl p-72">
-        <div className="-rotate-6 md:top-[1000px]">
+      <div className="absolute top-[-50px] z-10 h-[200px] w-[100vw] overflow-hidden rounded-2xl p-36 md:top-[-200px] md:p-72">
+        <div className="-rotate-6">
           <ParallaxText baseVelocity={-2} controls={controls}>
             Eric Manning • Software Engineering BS Student @ RIT
           </ParallaxText>
         </div>
-      </div> */}
-      {/* <div className="absolute top-[200px] z-10 h-[200px] w-full overflow-hidden rounded-2xl p-96">
-        <div className="rotate-12 md:top-[1000px]">
+      </div>
+      <div className="absolute top-[400px] z-10 h-[200px] w-[100vw] overflow-hidden rounded-2xl p-36 md:top-[200px] md:p-96">
+        <div className="rotate-12">
           <ParallaxText baseVelocity={2} controls={controls}>
             Eric Manning • Software Engineering BS Student @ RIT
           </ParallaxText>
         </div>
-      </div> */}
+      </div>
       <motion.div
         className="absolute right-1/2 top-12 h-[90vh] w-[90vw] translate-x-1/2 rounded-full opacity-15 blur-3xl md:right-12 md:translate-x-0"
         variants={{
