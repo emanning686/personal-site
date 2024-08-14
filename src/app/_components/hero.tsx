@@ -130,7 +130,7 @@ export default function Hero({ start }: { start: boolean }) {
 
   return (
     <div className="relative h-full w-full">
-      <div className="p-4">
+      <div className="w-full p-4">
         <Image
           src="/pfp.jpg"
           alt="Profile picture"
