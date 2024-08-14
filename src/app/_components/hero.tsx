@@ -139,20 +139,20 @@ export default function Hero({ start }: { start: boolean }) {
           className="absolute right-1/2 top-32 z-10 translate-x-1/2 scale-75 rounded-3xl shadow-2xl shadow-[#715d7e] md:right-36 md:translate-x-0 md:scale-100"
         />
       </div>
-      <div className="absolute -top-48 z-10 h-[200px] w-full overflow-hidden rounded-2xl p-72">
+      {/* <div className="absolute -top-48 z-10 h-[200px] w-full overflow-hidden rounded-2xl p-72">
         <div className="-rotate-6 md:top-[1000px]">
           <ParallaxText baseVelocity={-2} controls={controls}>
             Eric Manning • Software Engineering BS Student @ RIT
           </ParallaxText>
         </div>
-      </div>
-      <div className="absolute top-[200px] z-10 h-[200px] w-full overflow-hidden rounded-2xl p-96">
+      </div> */}
+      {/* <div className="absolute top-[200px] z-10 h-[200px] w-full overflow-hidden rounded-2xl p-96">
         <div className="rotate-12 md:top-[1000px]">
           <ParallaxText baseVelocity={2} controls={controls}>
             Eric Manning • Software Engineering BS Student @ RIT
           </ParallaxText>
         </div>
-      </div>
+      </div> */}
       <motion.div
         className="absolute right-1/2 top-12 h-[90vh] w-[90vw] translate-x-1/2 rounded-full opacity-15 blur-3xl md:right-12 md:translate-x-0"
         variants={{
@@ -164,7 +164,7 @@ export default function Hero({ start }: { start: boolean }) {
         transition={{ duration: 0.5 }}
       />
       <motion.div
-        className="absolute right-1/2 top-12 h-[800px] w-[1200px] translate-x-1/2 rounded-full opacity-10 blur-3xl md:right-12 md:translate-x-0"
+        className="absolute right-1/2 top-12 h-[800px] w-full translate-x-1/2 rounded-full opacity-10 blur-3xl md:right-12 md:w-[1200px] md:translate-x-0"
         variants={{
           initial: { backgroundColor: "#5787a9" },
           animate: { backgroundColor: "#e084a8" },
@@ -174,7 +174,7 @@ export default function Hero({ start }: { start: boolean }) {
         transition={{ duration: 0.5 }}
       />
       <motion.div
-        className="absolute right-1/2 top-96 h-[400px] w-[700px] translate-x-1/2 rounded-full opacity-15 blur-3xl md:right-12 md:translate-x-0"
+        className="absolute right-1/2 top-96 h-[400px] w-full translate-x-1/2 rounded-full opacity-15 blur-3xl md:right-12 md:w-[700px] md:translate-x-0"
         variants={{
           initial: { backgroundColor: "#8e80ae" },
           animate: { backgroundColor: "#2a75ff" },
