@@ -62,14 +62,14 @@ export default function Home() {
         </div>
       </motion.div>
       <motion.div
-        className={"fixed inset-0 -z-20 w-full bg-[url('/bg1.png')] bg-center"}
+        className={"fixed inset-0 -z-20 bg-[url('/bg1.png')] bg-center"}
         variants={{ initial: { opacity: 1 }, animate: { opacity: 0 } }}
         initial="initial"
         animate={controls2}
         transition={{ duration: 0.5 }}
       />
       <motion.div
-        className={"fixed inset-0 -z-20 w-full bg-[url('/bg2.png')] bg-center"}
+        className={"fixed inset-0 -z-20 bg-[url('/bg2.png')] bg-center"}
         variants={{ initial: { opacity: 0 }, animate: { opacity: 1 } }}
         initial="initial"
         animate={controls1}

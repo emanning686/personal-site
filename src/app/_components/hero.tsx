@@ -130,69 +130,47 @@ export default function Hero({ start }: { start: boolean }) {
 
   return (
     <div className="relative h-full w-full">
-      <div className="w-full p-4">
+      <div className="absolute right-1/2 top-32 z-10 flex translate-x-1/2 flex-col items-center gap-4 lg:right-12 lg:translate-x-0 lg:flex-row-reverse xl:right-36">
         <Image
           src="/pfp.jpg"
           alt="Profile picture"
           width={500}
           height={500}
-          className="absolute right-1/2 top-32 z-10 translate-x-1/2 scale-75 rounded-3xl shadow-2xl shadow-[#715d7e] md:right-36 md:translate-x-0 md:scale-100"
+          className="scale-75 rounded-3xl shadow-2xl shadow-[#2b2d46] md:scale-100"
         />
+        <div className="h-[425px] w-[350px] rounded-xl bg-[#2b2d46] bg-opacity-50 p-2 text-2xl md:p-4 lg:h-[700px] lg:w-[400px] lg:text-4xl">
+          <h1 className="font-semibold text-[#d0cae9]">
+            What I'm doing this semester:
+          </h1>
+          <h1 className="font-light text-[#fed8b4]">Gen Chem for Engineers</h1>
+          <h1 className="font-light text-[#f79c95]">Gen & Analy Chem Lab I</h1>
+          <h1 className="font-light text-[#fed8b4]">Principles of Marketing</h1>
+          <h1 className="font-light text-[#f79c95]">
+            Undergraduate Co-op Seminar
+          </h1>
+          <h1 className="font-light text-[#fed8b4]">
+            Intro to Software Engineering
+          </h1>
+          <h1 className="font-light text-[#f79c95]">Web Engineering</h1>
+          <h1 className="font-light text-[#fed8b4]">
+            Introduction to Visual Culture
+          </h1>
+        </div>
       </div>
-      <div className="absolute top-[-50px] z-10 h-[200px] w-[100vw] overflow-hidden rounded-2xl p-36 md:top-[-200px] md:p-72">
+      <div className="absolute top-[-50px] z-10 h-[200px] w-[100vw] overflow-hidden rounded-2xl p-36 md:top-[-250px] md:p-72">
         <div className="-rotate-6">
           <ParallaxText baseVelocity={-2} controls={controls}>
             Eric Manning • Software Engineering BS Student @ RIT
           </ParallaxText>
         </div>
       </div>
-      <div className="absolute top-[400px] z-10 h-[200px] w-[100vw] overflow-hidden rounded-2xl p-36 md:top-[200px] md:p-96">
+      <div className="absolute top-[300px] z-10 h-[200px] w-[100vw] overflow-hidden rounded-2xl p-36 md:p-96 lg:top-[500px]">
         <div className="rotate-12">
           <ParallaxText baseVelocity={2} controls={controls}>
             Eric Manning • Software Engineering BS Student @ RIT
           </ParallaxText>
         </div>
       </div>
-      <motion.div
-        className="absolute right-1/2 top-12 h-[90vh] w-[90vw] translate-x-1/2 rounded-full opacity-15 blur-3xl md:right-12 md:translate-x-0"
-        variants={{
-          initial: { backgroundColor: "#4b4d6c" },
-          animate: { backgroundColor: "#f79c95" },
-        }}
-        initial="initial"
-        animate={controls}
-        transition={{ duration: 0.5 }}
-      />
-      <motion.div
-        className="absolute right-1/2 top-12 h-[800px] w-full translate-x-1/2 rounded-full opacity-10 blur-3xl md:right-12 md:w-[1200px] md:translate-x-0"
-        variants={{
-          initial: { backgroundColor: "#5787a9" },
-          animate: { backgroundColor: "#e084a8" },
-        }}
-        initial="initial"
-        animate={controls}
-        transition={{ duration: 0.5 }}
-      />
-      <motion.div
-        className="absolute right-1/2 top-96 h-[400px] w-full translate-x-1/2 rounded-full opacity-15 blur-3xl md:right-12 md:w-[700px] md:translate-x-0"
-        variants={{
-          initial: { backgroundColor: "#8e80ae" },
-          animate: { backgroundColor: "#2a75ff" },
-        }}
-        initial="initial"
-        animate={controls}
-        transition={{ duration: 0.5 }}
-      />
-      <motion.div
-        className="absolute right-1/2 top-48 h-[500px] w-[400px] translate-x-1/2 rounded-full opacity-20 blur-3xl md:right-96 md:translate-x-0"
-        variants={{
-          initial: { backgroundColor: "#715d7e" },
-          animate: { backgroundColor: "#e96c2a" },
-        }}
-        initial="initial"
-        animate={controls}
-        transition={{ duration: 0.5 }}
-      />
     </div>
   );
 }
