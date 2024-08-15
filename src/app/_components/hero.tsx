@@ -151,8 +151,12 @@ export default function Hero({ start }: { start: boolean }) {
   const yBanners = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
 
   return (
-    <motion.div ref={ref} className="relative h-full w-full" style={{ y }}>
-      <div className="absolute right-1/2 top-32 z-10 flex translate-x-1/2 flex-col items-center gap-48 md:gap-80 lg:right-12 lg:translate-x-0 lg:flex-row-reverse lg:gap-4 xl:right-36">
+    <motion.div
+      ref={ref}
+      className="relative -inset-y-32 h-full w-full md:-inset-y-0"
+      style={{ y }}
+    >
+      <div className="absolute right-1/2 top-32 z-10 flex translate-x-1/2 flex-col items-center gap-24 md:gap-28 lg:right-12 lg:translate-x-0 lg:flex-row-reverse lg:gap-4 xl:right-36">
         <Image
           src="/pfp.jpg"
           alt="Profile picture"

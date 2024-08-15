@@ -86,7 +86,7 @@ export default function Home() {
         animate={controls1}
         transition={{ duration: 0.5 }}
       />
-      <div className="grid h-screen grid-rows-[auto_1fr] md:h-[140vh] lg:h-screen">
+      <div className="grid h-screen grid-rows-[auto_1fr]">
         <Nav start={start} />
         <Hero start={start} />
       </div>
