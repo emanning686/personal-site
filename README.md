@@ -5,6 +5,7 @@
 - [x] scroll change bg color immediately
 - [x] text light up with scroll
 - [x] page transition to home
+- [x] make hover effect scroll based on mobile
 - [ ] Home scrolls up faster than incoming section
 - [ ] elements fade in and out
 - [ ] technologies magnet/sticky

@@ -35,6 +35,7 @@ function Word({
 
 export default function Home() {
   const router = useRouter();
+
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -116,6 +117,7 @@ export default function Home() {
             })}
           </motion.p>
         </div>
+        <div className="h-[30vh]" />
       </div>
       <motion.div
         className="fixed left-0 top-0 flex h-screen w-full items-center justify-center text-6xl font-bold text-[#d0cae9] md:text-8xl"

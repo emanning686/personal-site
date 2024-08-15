@@ -6,10 +6,22 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
+import Lenis from "lenis";
 import Nav from "../_components/nav";
 import Hero from "../_components/hero";
 
 export default function Home() {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
   const [start, setStart] = useState(true);
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });

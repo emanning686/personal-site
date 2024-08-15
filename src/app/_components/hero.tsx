@@ -119,6 +119,15 @@ function ParallaxText({
 }
 
 export default function Hero({ start }: { start: boolean }) {
+  const [hoverable, setHoverable] = useState(true);
+  useEffect(() => {
+    if (window.matchMedia("(pointer: coarse)").matches) {
+      setHoverable(false);
+    } else {
+      setHoverable(true);
+    }
+  }, []);
+
   const [hovered, setHovered] = useState(false);
 
   const controls = useAnimationControls();
@@ -138,7 +147,7 @@ export default function Hero({ start }: { start: boolean }) {
 
   return (
     <div className="relative h-full w-full">
-      <div className="absolute right-1/2 top-32 z-10 flex translate-x-1/2 flex-col items-center gap-28 md:gap-80 lg:right-12 lg:translate-x-0 lg:flex-row-reverse lg:gap-4 xl:right-36">
+      <div className="absolute right-1/2 top-32 z-10 flex translate-x-1/2 flex-col items-center gap-48 md:gap-80 lg:right-12 lg:translate-x-0 lg:flex-row-reverse lg:gap-4 xl:right-36">
         <Image
           src="/pfp.jpg"
           alt="Profile picture"
@@ -151,10 +160,10 @@ export default function Hero({ start }: { start: boolean }) {
           variants={{
             initial: {
               height: "var(--h-init)",
-              backgroundColor: "#d0cae9",
+              backgroundColor: "#ffffff",
               transition: { delay: 0.2 },
             },
-            animate: { height: "var(--h)", backgroundColor: "#d0cae9" },
+            animate: { height: "var(--h)", backgroundColor: "#ffffff" },
             startInitial: {
               height: "var(--h-init)",
               backgroundColor: "#211f21",
@@ -170,12 +179,18 @@ export default function Hero({ start }: { start: boolean }) {
           onHoverEnd={() => {
             setHovered(false);
           }}
+          onViewportEnter={() => {
+            !hoverable && setHovered(true);
+          }}
+          onViewportLeave={() => {
+            !hoverable && setHovered(false);
+          }}
         >
           <motion.h1
             className="text-2xl font-semibold lg:text-4xl"
             variants={{
               initial: { color: "#d0cae9" },
-              animate: { color: "#4b4d6c" },
+              animate: { color: "#f79c95" },
             }}
             initial="initial"
             animate={controls}
@@ -343,7 +358,7 @@ export default function Hero({ start }: { start: boolean }) {
           </ParallaxText>
         </div>
       </div>
-      <div className="absolute top-[300px] z-10 h-[200px] w-[100vw] overflow-hidden rounded-2xl p-36 md:top-[400px] md:p-52 lg:top-[500px] lg:p-96">
+      <div className="absolute top-[300px] z-10 h-[200px] w-[100vw] overflow-hidden rounded-2xl p-36 md:top-[400px] md:p-52 lg:top-[450px] lg:p-96">
         <div className="rotate-12">
           <ParallaxText baseVelocity={2} controls={controls}>
             Eric Manning • Software Engineering BS Student @ RIT
