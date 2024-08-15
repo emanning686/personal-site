@@ -145,8 +145,12 @@ export default function Hero({ start }: { start: boolean }) {
     }
   }, [start, hovered]);
 
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "75%"]);
+
   return (
-    <div className="relative h-full w-full">
+    <motion.div ref={ref} className="relative h-full w-full" style={{ y }}>
       <div className="absolute right-1/2 top-32 z-10 flex translate-x-1/2 flex-col items-center gap-48 md:gap-80 lg:right-12 lg:translate-x-0 lg:flex-row-reverse lg:gap-4 xl:right-36">
         <Image
           src="/pfp.jpg"
@@ -365,6 +369,6 @@ export default function Hero({ start }: { start: boolean }) {
           </ParallaxText>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

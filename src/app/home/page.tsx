@@ -91,6 +91,7 @@ export default function Home() {
         <Nav start={start} />
         <Hero start={start} />
       </div>
+      <div className="relative z-10 h-screen w-full bg-[#bbaeb5]"></div>
       <div className="h-screen" />
     </main>
   );
