@@ -9,6 +9,7 @@ import {
 import Lenis from "lenis";
 import Nav from "../_components/nav";
 import Hero from "../_components/hero";
+import Technologies from "../_components/technologies";
 
 export default function Home() {
   useEffect(() => {
@@ -25,10 +26,8 @@ export default function Home() {
   const [start, setStart] = useState(true);
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const [bg, setBg] = useState("/bg1.png");
 
   useMotionValueEvent(scrollYProgress, "change", () => {
-    console.log(scrollYProgress.get());
     if (scrollYProgress.get() > 0) {
       setStart(false);
     } else {
@@ -87,11 +86,11 @@ export default function Home() {
         animate={controls1}
         transition={{ duration: 0.5 }}
       />
-      <div className="grid h-screen grid-rows-[auto_1fr]">
+      <div className="grid h-screen grid-rows-[auto_1fr] md:h-[140vh] lg:h-screen">
         <Nav start={start} />
         <Hero start={start} />
       </div>
-      <div className="relative z-10 h-screen w-full bg-[#bbaeb5]"></div>
+      <Technologies />
       <div className="h-screen" />
     </main>
   );

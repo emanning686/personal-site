@@ -147,7 +147,8 @@ export default function Hero({ start }: { start: boolean }) {
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "75%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
+  const yBanners = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
 
   return (
     <motion.div ref={ref} className="relative h-full w-full" style={{ y }}>
@@ -355,20 +356,26 @@ export default function Hero({ start }: { start: boolean }) {
           </motion.h1>
         </motion.div>
       </div>
-      <div className="absolute top-[-50px] z-10 h-[200px] w-[100vw] overflow-hidden rounded-2xl p-36 md:top-[-250px] md:p-72">
+      <motion.div
+        className="absolute top-[-50px] z-10 h-[200px] w-[100vw] overflow-hidden rounded-2xl p-36 md:top-[-250px] md:p-72"
+        style={{ y: yBanners }}
+      >
         <div className="-rotate-6">
           <ParallaxText baseVelocity={-2} controls={controls}>
             Eric Manning • Software Engineering BS Student @ RIT
           </ParallaxText>
         </div>
-      </div>
-      <div className="absolute top-[300px] z-10 h-[200px] w-[100vw] overflow-hidden rounded-2xl p-36 md:top-[400px] md:p-52 lg:top-[450px] lg:p-96">
+      </motion.div>
+      <motion.div
+        className="absolute top-[300px] z-10 h-[200px] w-[100vw] overflow-hidden rounded-2xl p-36 md:top-[400px] md:p-52 lg:top-[450px] lg:p-96"
+        style={{ y: yBanners }}
+      >
         <div className="rotate-12">
           <ParallaxText baseVelocity={2} controls={controls}>
             Eric Manning • Software Engineering BS Student @ RIT
           </ParallaxText>
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
