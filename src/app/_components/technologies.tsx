@@ -1,17 +1,37 @@
+import { useRef } from "react";
 import Magnet from "./magnet";
-import Image from "next/image";
+import { ReactTyped } from "react-typed";
+import { motion, useScroll } from "framer-motion";
 
-export default function Technologies() {
+export default function Technologies({
+  setHeroHidden,
+}: {
+  setHeroHidden: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "start start"],
+  });
+
   return (
-    <div
+    <motion.div
+      ref={ref}
       className="relative z-10 h-[80vh] w-full bg-[#fed8b4]"
       style={{
         borderTopLeftRadius: "100% 5%",
         borderTopRightRadius: "100% 5%",
       }}
+      onViewportEnter={() => setHeroHidden(false)}
+      onViewportLeave={() => scrollYProgress.get() > 0.9 && setHeroHidden(true)}
+      viewport={{ amount: "all" }}
     >
       <div className="flex w-full items-center justify-center pt-32 text-7xl font-light text-[#2b2d46]">
-        <h1>Technologies</h1>
+        <ReactTyped
+          strings={["Technologies"]}
+          typeSpeed={40}
+          startWhenVisible
+        />
       </div>
       <div className="w-full p-12 text-4xl font-semibold text-[#2b2d46]">
         <h2>Languages</h2>
@@ -46,6 +66,6 @@ export default function Technologies() {
           <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vim/vim-original.svg" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

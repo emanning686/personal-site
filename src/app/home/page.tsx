@@ -12,6 +12,8 @@ import Hero from "../_components/hero";
 import Technologies from "../_components/technologies";
 
 export default function Home() {
+  const [heroHidden, setHeroHidden] = useState(false);
+
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -88,9 +90,11 @@ export default function Home() {
       />
       <div className="grid h-screen grid-rows-[auto_1fr]">
         <Nav start={start} />
-        <Hero start={start} />
+        <div className={heroHidden ? "hidden" : ""}>
+          <Hero start={start} />
+        </div>
       </div>
-      <Technologies />
+      <Technologies setHeroHidden={setHeroHidden} />
       <div className="h-screen" />
     </main>
   );
