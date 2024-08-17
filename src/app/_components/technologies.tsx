@@ -28,14 +28,14 @@ export default function Technologies({
       onViewportLeave={() => scrollYProgress.get() > 0.9 && setHeroHidden(true)}
       viewport={{ amount: "all" }}
     >
-      <div className="flex w-full items-center justify-center pt-32 text-4xl font-light text-[#2b2d46] md:text-7xl">
+      <div className="flex w-full items-center justify-center pt-16 text-5xl font-light text-[#2b2d46] md:pt-32 md:text-7xl">
         <ReactTyped
           strings={["Technologies"]}
           typeSpeed={60}
           startWhenVisible
         />
       </div>
-      <div className="flex w-full flex-col items-center p-12 text-xl font-semibold text-[#2b2d46] md:text-4xl">
+      <div className="flex w-full flex-col items-center p-12 text-2xl font-semibold text-[#2b2d46] md:text-4xl">
         <div className="flex flex-col gap-4">
           <h2>Languages</h2>
           <motion.div
