@@ -21,6 +21,8 @@ export default function Technologies({
       style={{
         borderTopLeftRadius: "100% 5%",
         borderTopRightRadius: "100% 5%",
+        borderBottomLeftRadius: "100% 5%",
+        borderBottomRightRadius: "100% 5%",
       }}
       onViewportEnter={() => setHeroHidden(false)}
       onViewportLeave={() => scrollYProgress.get() > 0.9 && setHeroHidden(true)}
