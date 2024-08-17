@@ -24,6 +24,38 @@
 - [ ] sticky footer
 - [ ] page transitions everywhere
 
+## Languages
+
+- [ ] Java
+- [ ] Python
+- [ ] Javascript
+- [ ] Typescript
+- [ ] HTML
+- [ ] CSS
+- [ ] SQL
+- [ ] C
+- [ ] C++
+
+## Frameworks
+
+- [ ] Node.js
+- [ ] Express.js
+- [ ] React.js
+- [ ] Next.js
+- [ ] Vite.js
+- [ ] TailwindCSS
+- [ ] JUnit
+- [ ] Pytest
+- [ ] PostgreSQL
+- [ ] MongoDB
+
+## Tools
+
+- [ ] Git
+- [ ] Linux
+- [ ] VSCode
+- [ ] Vim
+
 ---
 
 sections:
