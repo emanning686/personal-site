@@ -26,35 +26,35 @@
 
 ## Languages
 
-- [ ] Java
-- [ ] Python
-- [ ] Javascript
-- [ ] Typescript
-- [ ] HTML
-- [ ] CSS
-- [ ] SQL
-- [ ] C
-- [ ] C++
+- [x] Java
+- [x] Python
+- [x] Javascript
+- [x] Typescript
+- [x] HTML
+- [x] CSS
+- [x] SQL
+- [x] C
+- [x] C++
 
 ## Frameworks
 
-- [ ] Node.js
-- [ ] Express.js
-- [ ] React.js
-- [ ] Next.js
-- [ ] Vite.js
-- [ ] TailwindCSS
-- [ ] JUnit
-- [ ] Pytest
-- [ ] PostgreSQL
-- [ ] MongoDB
+- [x] Node.js
+- [x] Express.js
+- [x] React.js
+- [x] Next.js
+- [x] Vite.js
+- [x] TailwindCSS
+- [x] JUnit
+- [x] Pytest
+- [x] PostgreSQL
+- [x] MongoDB
 
 ## Tools
 
-- [ ] Git
-- [ ] Linux
-- [ ] VSCode
-- [ ] Vim
+- [x] Git
+- [x] Linux
+- [x] VSCode
+- [x] Vim
 
 ---
 

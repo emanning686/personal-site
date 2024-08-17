@@ -1,35 +1,39 @@
-import { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import Image from "next/image";
 
-export default function Magnet({ children }: { children: any }) {
-  const ref = useRef<any>(null);
+export default function Magnet({ src }: { src: string }) {
+  const magnetic = useRef<HTMLDivElement>(null);
 
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  useEffect(() => {
+    const xTo = gsap.quickTo(magnetic.current, "x", {
+      duration: 1,
+      ease: "elastic.out(1, 0.5)",
+    });
+    const yTo = gsap.quickTo(magnetic.current, "y", {
+      duration: 1,
+      ease: "elastic.out(1, 0.5)",
+    });
 
-  const handleMouseMove = (e: any) => {
-    const { clientX, clientY } = e;
-    const { height, width, left, top } = ref.current.getBoundingClientRect();
-    const middleX = clientX - (left + width / 2);
-    const middleY = clientY - (top + height / 2);
-    setPosition({ x: middleX, y: middleY });
-  };
+    if (magnetic.current) {
+      magnetic.current.addEventListener("mousemove", (e) => {
+        const { clientX, clientY } = e;
+        const { height, width, left, top } =
+          magnetic.current.getBoundingClientRect();
+        const x = clientX - (left + width / 2);
+        const y = clientY - (top + height / 2);
+        xTo(x);
+        yTo(y);
+      });
+      magnetic.current.addEventListener("mouseleave", (e) => {
+        xTo(0);
+        yTo(0);
+      });
+    }
+  }, []);
 
-  const handleReset = () => {
-    setPosition({ x: 0, y: 0 });
-  };
-
-  const { x, y } = position;
-
-  return (
-    <motion.div
-      style={{ position: "relative" }}
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleReset}
-      animate={{ x, y }}
-      transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
-    >
-      {children}
-    </motion.div>
+  return React.cloneElement(
+    <Image src={src} alt="icon" width={100} height={100} />,
+    { ref: magnetic },
   );
 }
