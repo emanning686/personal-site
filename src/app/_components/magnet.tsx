@@ -33,7 +33,13 @@ export default function Magnet({ src }: { src: string }) {
   }, []);
 
   return React.cloneElement(
-    <Image src={src} alt="icon" width={100} height={100} />,
+    <Image
+      className="-m-7 scale-50 md:-m-0 md:scale-100"
+      src={src}
+      alt="icon"
+      width={100}
+      height={100}
+    />,
     { ref: magnetic },
   );
 }
