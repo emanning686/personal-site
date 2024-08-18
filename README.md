@@ -8,12 +8,12 @@
 - [x] make hover effect scroll based on mobile
 - [x] Home scrolls up slower than incoming section
 - [ ] elements fade in and out
-- [ ] technologies magnet/sticky
+- [x] technologies magnet/sticky
 - [ ] projects section --- needs something \*bento grid maybe ---
 - [ ] custom cursor (smooth)
-- [ ] react-typed
-- [ ] burger - x animation button
-- [ ] navbar stays at top and button pops in after scroll
+- [x] react-typed
+- [x] burger - x animation button
+- [x] navbar stays at top and button pops in after scroll
 - [ ] parallax elements
 - [x] loading page - maybe animated text with scroll, or just slight delay before going away
 - [ ] scroll parallax entire page

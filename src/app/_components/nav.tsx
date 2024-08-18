@@ -26,9 +26,9 @@ export default function Nav({ start }: { start: boolean }) {
     >
       <div>Eric Manning</div>
       <div className="flex gap-2">
-        <NavLink href="/" text="Projects" />
-        <NavLink href="/" text="Resume" />
-        <NavLink href="/" text="Contact" />
+        <NavLink href="/" text="Projects" color="#f79c95" />
+        <NavLink href="/" text="Resume" color="#d6d753" />
+        <NavLink href="/" text="Contact" color="#5787a9" />
       </div>
     </motion.div>
   );

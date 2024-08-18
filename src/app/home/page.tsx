@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import Lenis from "lenis";
 import Nav from "../_components/nav";
+import Burger from "../_components/burger";
 import Hero from "../_components/hero";
 import Technologies from "../_components/technologies";
 
@@ -26,6 +27,7 @@ export default function Home() {
   }, []);
 
   const [start, setStart] = useState(true);
+  const [halfway, setHalfway] = useState(false);
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
 
@@ -34,6 +36,11 @@ export default function Home() {
       setStart(false);
     } else {
       setStart(true);
+    }
+    if (scrollYProgress.get() > 0.15) {
+      setHalfway(true);
+    } else {
+      setHalfway(false);
     }
   });
 
@@ -53,17 +60,17 @@ export default function Home() {
   return (
     <main ref={ref}>
       <motion.div
-        className="fixed left-0 top-0 z-30 h-[110vh] w-full bg-[#2b2d46] text-6xl font-bold text-[#d0cae9] md:text-8xl"
+        className="fixed left-0 top-0 z-50 h-[110vh] w-full bg-[#2b2d46] text-6xl font-bold text-[#d0cae9] md:text-8xl"
         variants={{
           initial: {
             y: 0,
-            borderBottomLeftRadius: "50% 10%",
-            borderBottomRightRadius: "50% 10%",
+            borderBottomLeftRadius: "100% 10%",
+            borderBottomRightRadius: "100% 10%",
           },
           animate: {
             y: "-100%",
-            borderBottomLeftRadius: "50% 0%",
-            borderBottomRightRadius: "50% 0%",
+            borderBottomLeftRadius: "100% 0%",
+            borderBottomRightRadius: "100% 0%",
           },
         }}
         initial="initial"
@@ -88,6 +95,7 @@ export default function Home() {
         animate={controls1}
         transition={{ duration: 0.5 }}
       />
+      <Burger halfway={halfway} />
       <div className="grid h-screen grid-rows-[auto_1fr]">
         <Nav start={start} />
         <div className={heroHidden ? "hidden" : ""}>

@@ -1,29 +1,27 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-export default function NavLink({
+export default function SlideLink({
   href,
   text,
-  color,
 }: {
   href: string;
   text: string;
-  color: string;
 }) {
   const topVariants = {
     initial: {
-      scaleY: 1,
+      y: 0,
     },
     hover: {
-      scaleY: 0,
+      y: "-100%",
     },
   };
   const bottomVariants = {
     initial: {
-      scaleY: 0,
+      y: "100%",
     },
     hover: {
-      scaleY: 1,
+      y: 0,
     },
   };
 
@@ -34,17 +32,20 @@ export default function NavLink({
 
   return (
     <Link href={href}>
-      <motion.div className="relative" initial="initial" whileHover="hover">
+      <motion.div
+        className="relative overflow-hidden"
+        initial="initial"
+        whileHover="hover"
+      >
         <motion.div
-          className="origin-top"
+          className="origin-top p-1"
           variants={topVariants}
           transition={transition}
         >
           {text}
         </motion.div>
         <motion.div
-          className="absolute top-0 origin-bottom"
-          style={{ color }}
+          className="absolute top-0 origin-bottom p-1"
           variants={bottomVariants}
           transition={transition}
         >

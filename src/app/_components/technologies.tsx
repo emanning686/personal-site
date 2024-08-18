@@ -17,7 +17,7 @@ export default function Technologies({
   return (
     <motion.div
       ref={ref}
-      className="relative z-10 h-[80vh] w-full bg-[#fed8b4]"
+      className="relative z-10 h-auto w-full bg-[#fed8b4] pb-24"
       style={{
         borderTopLeftRadius: "100% 5%",
         borderTopRightRadius: "100% 5%",
