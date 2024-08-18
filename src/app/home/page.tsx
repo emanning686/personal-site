@@ -25,6 +25,8 @@ export default function Home() {
     }
 
     requestAnimationFrame(raf);
+
+    lenis.scrollTo(0);
   }, []);
 
   const [start, setStart] = useState(true);
