@@ -11,6 +11,7 @@ import Nav from "../_components/nav";
 import Burger from "../_components/burger";
 import Hero from "../_components/hero";
 import Technologies from "../_components/technologies";
+import Projects from "../_components/projects";
 
 export default function Home() {
   const [heroHidden, setHeroHidden] = useState(false);
@@ -103,7 +104,7 @@ export default function Home() {
         </div>
       </div>
       <Technologies setHeroHidden={setHeroHidden} />
-      <div className="h-screen" />
+      <Projects />
     </main>
   );
 }

@@ -11,7 +11,7 @@ export default function Burger({ halfway }: { halfway: boolean }) {
   useEffect(() => {
     if (halfway) {
       visibleControls.start("opened");
-    } else {
+    } else if (!open) {
       visibleControls.start("closed");
     }
   }, [halfway]);
@@ -28,13 +28,16 @@ export default function Burger({ halfway }: { halfway: boolean }) {
     }
   }
 
-  function handleClick() {
+  async function handleClick() {
     if (!open) {
       iconControls.start("x");
       paneControls.start("opened");
     } else {
       iconControls.start("hover");
       paneControls.start("closed");
+      if (!halfway) {
+        setTimeout(() => visibleControls.start("closed"), 400);
+      }
     }
     setOpen(!open);
   }

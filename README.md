@@ -9,7 +9,7 @@
 - [x] Home scrolls up slower than incoming section
 - [ ] elements fade in and out
 - [x] technologies magnet/sticky
-- [ ] projects section --- needs something \*bento grid maybe ---
+- [ ] projects section - bento grid maybe
 - [ ] custom cursor (smooth)
 - [x] react-typed
 - [x] burger - x animation button
@@ -20,7 +20,6 @@
 - [x] horizontal constant slide element / slide linked to scroll -- framer scroll velocity
 - [x] static background image
 - [x] glow elements (blurs)
-- [ ] bento grid ig
 - [ ] sticky footer
 - [ ] page transitions everywhere
 
