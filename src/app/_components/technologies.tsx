@@ -48,15 +48,15 @@ export default function Technologies({
             whileInView={{ opacity: 1, filter: "blur(0px)", x: 0 }}
             viewport={{ amount: 0.5 }}
           >
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
+            <Magnet src="java.svg" />
+            <Magnet src="python.svg" />
+            <Magnet src="javascript.svg" />
+            <Magnet src="typescript.svg" />
+            <Magnet src="html.svg" />
+            <Magnet src="css.svg" />
+            <Magnet src="sql.svg" />
+            <Magnet src="c.svg" />
+            <Magnet src="cpp.svg" />
           </motion.div>
           <h2>Frameworks</h2>
           <motion.div
@@ -69,15 +69,16 @@ export default function Technologies({
             whileInView={{ opacity: 1, filter: "blur(0px)", x: 0 }}
             viewport={{ amount: 0.75 }}
           >
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/junit/junit-original-wordmark.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytest/pytest-original-wordmark.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
+            <Magnet src="nodejs.svg" />
+            <Magnet src="express.svg" />
+            <Magnet src="react.svg" />
+            <Magnet src="nextjs.svg" />
+            <Magnet src="vitejs.svg" />
+            <Magnet src="tailwindcss.svg" />
+            <Magnet src="junit.svg" />
+            <Magnet src="pytest.svg" />
+            <Magnet src="postgresql.svg" />
+            <Magnet src="mongodb.svg" />
           </motion.div>
           <h2>Tools</h2>
           <motion.div
@@ -90,10 +91,10 @@ export default function Technologies({
             whileInView={{ opacity: 1, filter: "blur(0px)", x: 0 }}
             viewport={{ amount: 0.5 }}
           >
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
-            <Magnet src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" />
+            <Magnet src="git.svg" />
+            <Magnet src="linux.svg" />
+            <Magnet src="vscode.svg" />
+            <Magnet src="postman.svg" />
           </motion.div>
         </div>
       </div>

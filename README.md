@@ -7,7 +7,7 @@
 - [x] page transition to home
 - [x] make hover effect scroll based on mobile
 - [x] Home scrolls up slower than incoming section
-- [ ] elements fade in and out
+- [x] elements fade in and out
 - [x] technologies magnet/sticky
 - [ ] projects section - bento grid maybe
 - [ ] custom cursor (smooth)
