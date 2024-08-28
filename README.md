@@ -17,7 +17,7 @@
 - [ ] parallax elements
 - [x] loading page - maybe animated text with scroll, or just slight delay before going away
 - [ ] scroll parallax entire page
-- [x] horizontal constant slide element / slide linked to scroll -- framer scroll velocity
+- [x] horizontal constant slide element / slide linke d to scroll -- framer scroll velocity
 - [x] static background image
 - [x] glow elements (blurs)
 - [ ] sticky footer
