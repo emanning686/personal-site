@@ -30,7 +30,7 @@ function getIcons(string: string) {
     <div className="z-10 flex items-center justify-center gap-2 overflow-hidden rounded-xl bg-[#4b4d6c] bg-opacity-25 p-2">
       {string.split(" ").map((s) => (
         <div>
-          <Magnet src={`${s}.svg`} key="s" />
+          <Magnet src={`${s}.svg`} key={s} />
         </div>
       ))}
     </div>
