@@ -30,7 +30,7 @@ function getIcons(string: string) {
     <div className="z-10 flex items-center justify-center gap-2 overflow-hidden rounded-xl bg-[#4b4d6c] bg-opacity-25 p-2">
       {string.split(" ").map((s) => (
         <div key={s}>
-          <Magnet src={`${s}.svg`} />
+          <Magnet src={`${s}.svg`} resize={false} />
         </div>
       ))}
     </div>
@@ -53,7 +53,7 @@ export default function ProjectLink({
   return (
     <Link href={href}>
       <motion.div
-        className="relative flex h-full w-full flex-col items-center justify-between gap-2 overflow-hidden rounded-xl bg-purple-400 p-4"
+        className="relative flex h-[400px] w-full flex-col items-center justify-between gap-2 overflow-hidden rounded-xl bg-purple-400 p-4 lg:h-full"
         onHoverStart={() => controls.start("hover")}
         onHoverEnd={() => controls.start("initial")}
       >

@@ -2,7 +2,13 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Image from "next/image";
 
-export default function Magnet({ src }: { src: string }) {
+export default function Magnet({
+  src,
+  resize,
+}: {
+  src: string;
+  resize: boolean;
+}) {
   const magnetic = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -34,7 +40,9 @@ export default function Magnet({ src }: { src: string }) {
 
   return React.cloneElement(
     <Image
-      className="-m-7 scale-50 md:-m-0 md:scale-100"
+      className={
+        resize ? "-m-7 scale-50 md:-m-0 md:scale-100" : "-m-0 scale-100"
+      }
       src={src}
       alt="icon"
       width={100}

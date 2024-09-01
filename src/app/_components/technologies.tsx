@@ -48,15 +48,15 @@ export default function Technologies({
             whileInView={{ opacity: 1, filter: "blur(0px)", x: 0 }}
             viewport={{ amount: 0.5 }}
           >
-            <Magnet src="java.svg" />
-            <Magnet src="python.svg" />
-            <Magnet src="javascript.svg" />
-            <Magnet src="typescript.svg" />
-            <Magnet src="html.svg" />
-            <Magnet src="css.svg" />
-            <Magnet src="sql.svg" />
-            <Magnet src="c.svg" />
-            <Magnet src="cpp.svg" />
+            <Magnet src="java.svg" resize={true} />
+            <Magnet src="python.svg" resize={true} />
+            <Magnet src="javascript.svg" resize={true} />
+            <Magnet src="typescript.svg" resize={true} />
+            <Magnet src="html.svg" resize={true} />
+            <Magnet src="css.svg" resize={true} />
+            <Magnet src="sql.svg" resize={true} />
+            <Magnet src="c.svg" resize={true} />
+            <Magnet src="cpp.svg" resize={true} />
           </motion.div>
           <h2>Frameworks</h2>
           <motion.div
@@ -69,16 +69,16 @@ export default function Technologies({
             whileInView={{ opacity: 1, filter: "blur(0px)", x: 0 }}
             viewport={{ amount: 0.75 }}
           >
-            <Magnet src="nodejs.svg" />
-            <Magnet src="express.svg" />
-            <Magnet src="react.svg" />
-            <Magnet src="nextjs.svg" />
-            <Magnet src="vitejs.svg" />
-            <Magnet src="tailwindcss.svg" />
-            <Magnet src="junit.svg" />
-            <Magnet src="pytest.svg" />
-            <Magnet src="postgresql.svg" />
-            <Magnet src="mongodb.svg" />
+            <Magnet src="nodejs.svg" resize={true} />
+            <Magnet src="express.svg" resize={true} />
+            <Magnet src="react.svg" resize={true} />
+            <Magnet src="nextjs.svg" resize={true} />
+            <Magnet src="vitejs.svg" resize={true} />
+            <Magnet src="tailwindcss.svg" resize={true} />
+            <Magnet src="junit.svg" resize={true} />
+            <Magnet src="pytest.svg" resize={true} />
+            <Magnet src="postgresql.svg" resize={true} />
+            <Magnet src="mongodb.svg" resize={true} />
           </motion.div>
           <h2>Tools</h2>
           <motion.div
@@ -91,10 +91,10 @@ export default function Technologies({
             whileInView={{ opacity: 1, filter: "blur(0px)", x: 0 }}
             viewport={{ amount: 0.5 }}
           >
-            <Magnet src="git.svg" />
-            <Magnet src="linux.svg" />
-            <Magnet src="vscode.svg" />
-            <Magnet src="postman.svg" />
+            <Magnet src="git.svg" resize={true} />
+            <Magnet src="linux.svg" resize={true} />
+            <Magnet src="vscode.svg" resize={true} />
+            <Magnet src="postman.svg" resize={true} />
           </motion.div>
         </div>
       </div>

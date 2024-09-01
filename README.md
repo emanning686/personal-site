@@ -9,7 +9,7 @@
 - [x] Home scrolls up slower than incoming section
 - [x] elements fade in and out
 - [x] technologies magnet/sticky
-- [ ] projects section - bento grid maybe
+- [x] projects section - bento grid maybe
 - [ ] custom cursor (smooth)
 - [x] react-typed
 - [x] burger - x animation button

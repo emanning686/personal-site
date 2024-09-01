@@ -48,7 +48,7 @@ export default function Home() {
   }, []);
 
   const text =
-    "Hello, I'm Eric. I am a Software Engineering student at the Rochester Institute of Technology, and a self taught developer with 4 years of experience. I enjoy problem solving through code and learning new languages to better do so.";
+    "Hello, I'm Eric. I am a Software Engineering student at the Rochester Institute of Technology, and a self taught developer with 3 years of experience. I enjoy problem solving through code and learning new languages to better do so.";
 
   const words = text.split(" ");
 
