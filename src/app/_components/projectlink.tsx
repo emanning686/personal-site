@@ -1,4 +1,5 @@
 import { motion, useAnimationControls } from "framer-motion";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Magnet from "./magnet";
 import Link from "next/link";
@@ -48,6 +49,13 @@ export default function ProjectLink({
   blurb: string;
   href: string;
 }) {
+  const [mobile, setMobile] = useState(false);
+  useEffect(() => {
+    if (window.matchMedia("(pointer: coarse)").matches) {
+      setMobile(true);
+    }
+  }, []);
+
   const controls = useAnimationControls();
 
   return (
@@ -68,7 +76,7 @@ export default function ProjectLink({
             initial: { scale: 0 },
             hover: { scale: 1.25 },
           }}
-          initial="initial"
+          initial={mobile ? "hover" : "initial"}
           animate={controls}
           transition={{ duration: 0.35, ease: "easeInOut" }}
         />
@@ -78,7 +86,7 @@ export default function ProjectLink({
             initial: { height: 42 },
             hover: { height: "auto" },
           }}
-          initial="initial"
+          initial={mobile ? "hover" : "initial"}
           animate={controls}
           transition={{ duration: 0.35, ease: "easeInOut" }}
         >
