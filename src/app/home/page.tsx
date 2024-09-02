@@ -12,6 +12,7 @@ import Burger from "../_components/burger";
 import Hero from "../_components/hero";
 import Technologies from "../_components/technologies";
 import ProjectsGrid from "../_components/projectsgrid";
+import Footer from "../_components/footer";
 
 export default function Home() {
   const [heroHidden, setHeroHidden] = useState(false);
@@ -107,6 +108,7 @@ export default function Home() {
       </div>
       <Technologies setHeroHidden={setHeroHidden} />
       <ProjectsGrid />
+      <Footer />
     </main>
   );
 }

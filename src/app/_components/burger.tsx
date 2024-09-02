@@ -146,7 +146,7 @@ export default function Burger({ halfway }: { halfway: boolean }) {
         animate={paneControls}
         transition={{ duration: 0.75, type: "spring" }}
       >
-        <SlideLink href="/" text="Projects" />
+        <SlideLink href="/" text="About" />
       </motion.div>
       <motion.div
         className="fixed left-16 top-48 z-40 text-5xl text-[#ffffff]"
