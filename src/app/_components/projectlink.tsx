@@ -49,14 +49,15 @@ export default function ProjectLink({
   blurb: string;
   href: string;
 }) {
+  const controls = useAnimationControls();
+
   const [mobile, setMobile] = useState(false);
   useEffect(() => {
-    if (window.matchMedia("(pointer: coarse)").matches) {
+    if (!window.matchMedia("(pointer: coarse)").matches) {
       setMobile(true);
+      controls.start("hover");
     }
   }, []);
-
-  const controls = useAnimationControls();
 
   return (
     <Link href={href}>
@@ -76,7 +77,7 @@ export default function ProjectLink({
             initial: { scale: 0 },
             hover: { scale: 1.25 },
           }}
-          initial={mobile ? "hover" : "initial"}
+          initial="initial"
           animate={controls}
           transition={{ duration: 0.35, ease: "easeInOut" }}
         />
@@ -86,7 +87,7 @@ export default function ProjectLink({
             initial: { height: 42 },
             hover: { height: "auto" },
           }}
-          initial={mobile ? "hover" : "initial"}
+          initial="initial"
           animate={controls}
           transition={{ duration: 0.35, ease: "easeInOut" }}
         >
