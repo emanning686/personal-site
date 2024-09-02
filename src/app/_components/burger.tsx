@@ -40,7 +40,7 @@ export default function Burger({ halfway }: { halfway: boolean }) {
       iconControls.start("x");
       paneControls.start("opened");
     } else {
-      mobile ? iconControls.start("closed") : iconControls.start("hover");
+      mobile ? iconControls.start("burger") : iconControls.start("hover");
       paneControls.start("closed");
       if (!halfway) {
         setTimeout(() => visibleControls.start("closed"), 400);
