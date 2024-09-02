@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Magnet from "./magnet";
 import { ReactTyped } from "react-typed";
 import { motion, useScroll } from "framer-motion";
@@ -8,6 +8,13 @@ export default function Technologies({
 }: {
   setHeroHidden: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
+  const [mobile, setMobile] = useState(false);
+  useEffect(() => {
+    if (window.matchMedia("(pointer: coarse)").matches) {
+      setMobile(true);
+    }
+  }, []);
+
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -25,12 +32,9 @@ export default function Technologies({
         borderBottomRightRadius: "100% 5%",
       }}
       onViewportEnter={() => setHeroHidden(false)}
-      onViewportLeave={() => {
-        const previousValue = scrollYProgress?.getPrevious();
-        if (previousValue !== undefined) {
-          scrollYProgress.get() > previousValue && setHeroHidden(true);
-        }
-      }}
+      onViewportLeave={() =>
+        !mobile && scrollYProgress.get() > 0.9 && setHeroHidden(true)
+      }
       viewport={{ amount: "all" }}
     >
       <div className="flex w-full items-center justify-center pt-16 text-5xl font-light text-[#2b2d46] md:pt-32 md:text-7xl">
