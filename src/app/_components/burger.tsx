@@ -8,6 +8,13 @@ export default function Burger({ halfway }: { halfway: boolean }) {
   const iconControls = useAnimationControls();
   const paneControls = useAnimationControls();
 
+  const [mobile, setMobile] = useState(false);
+  useEffect(() => {
+    if (window.matchMedia("(pointer: coarse)").matches) {
+      setMobile(true);
+    }
+  }, []);
+
   useEffect(() => {
     if (halfway) {
       visibleControls.start("opened");
@@ -33,7 +40,7 @@ export default function Burger({ halfway }: { halfway: boolean }) {
       iconControls.start("x");
       paneControls.start("opened");
     } else {
-      iconControls.start("hover");
+      mobile ? iconControls.start("closed") : iconControls.start("hover");
       paneControls.start("closed");
       if (!halfway) {
         setTimeout(() => visibleControls.start("closed"), 400);

@@ -51,10 +51,8 @@ export default function ProjectLink({
 }) {
   const controls = useAnimationControls();
 
-  const [mobile, setMobile] = useState(false);
   useEffect(() => {
     if (window.matchMedia("(pointer: coarse)").matches) {
-      setMobile(true);
       controls.start("hover");
     }
   }, []);
