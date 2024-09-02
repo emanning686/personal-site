@@ -46,7 +46,7 @@ export default function Footer() {
             </h2>
           </div>
         </div>
-        <div className="p-5 text-[75px] font-extrabold text-[#f79c95] lg:p-10 lg:text-[200px]">
+        <div className="pb-10 pl-3 text-[75px] font-extrabold text-[#f79c95] lg:pb-10 lg:pl-10 lg:text-[200px]">
           <motion.h1
             className="[--gap:25px] lg:[--gap:75px]"
             style={{ y: "var(--gap)" }}
