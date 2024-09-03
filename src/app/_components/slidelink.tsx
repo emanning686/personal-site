@@ -1,13 +1,6 @@
 import { motion } from "framer-motion";
-import Link from "next/link";
 
-export default function SlideLink({
-  href,
-  text,
-}: {
-  href: string;
-  text: string;
-}) {
+export default function SlideLink({ text }: { text: string }) {
   const topVariants = {
     initial: {
       y: 0,
@@ -31,27 +24,25 @@ export default function SlideLink({
   };
 
   return (
-    <Link href={href}>
+    <motion.div
+      className="relative overflow-hidden"
+      initial="initial"
+      whileHover="hover"
+    >
       <motion.div
-        className="relative overflow-hidden"
-        initial="initial"
-        whileHover="hover"
+        className="origin-top p-1"
+        variants={topVariants}
+        transition={transition}
       >
-        <motion.div
-          className="origin-top p-1"
-          variants={topVariants}
-          transition={transition}
-        >
-          {text}
-        </motion.div>
-        <motion.div
-          className="absolute top-0 origin-bottom p-1"
-          variants={bottomVariants}
-          transition={transition}
-        >
-          {text}
-        </motion.div>
+        {text}
       </motion.div>
-    </Link>
+      <motion.div
+        className="absolute top-0 origin-bottom p-1"
+        variants={bottomVariants}
+        transition={transition}
+      >
+        {text}
+      </motion.div>
+    </motion.div>
   );
 }

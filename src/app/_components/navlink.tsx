@@ -1,12 +1,9 @@
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 export default function NavLink({
-  href,
   text,
   color,
 }: {
-  href: string;
   text: string;
   color: string;
 }) {
@@ -33,24 +30,22 @@ export default function NavLink({
   };
 
   return (
-    <Link href={href}>
-      <motion.div className="relative" initial="initial" whileHover="hover">
-        <motion.div
-          className="origin-top"
-          variants={topVariants}
-          transition={transition}
-        >
-          {text}
-        </motion.div>
-        <motion.div
-          className="absolute top-0 origin-bottom"
-          style={{ color }}
-          variants={bottomVariants}
-          transition={transition}
-        >
-          {text}
-        </motion.div>
+    <motion.div className="relative" initial="initial" whileHover="hover">
+      <motion.div
+        className="origin-top"
+        variants={topVariants}
+        transition={transition}
+      >
+        {text}
       </motion.div>
-    </Link>
+      <motion.div
+        className="absolute top-0 origin-bottom"
+        style={{ color }}
+        variants={bottomVariants}
+        transition={transition}
+      >
+        {text}
+      </motion.div>
+    </motion.div>
   );
 }

@@ -1,8 +1,15 @@
 import { useEffect, useState } from "react";
 import { motion, useAnimationControls } from "framer-motion";
+import Link from "next/link";
 import SlideLink from "./slidelink";
 
-export default function Burger({ halfway }: { halfway: boolean }) {
+export default function Burger({
+  halfway,
+  scrollToBottom,
+}: {
+  halfway: boolean;
+  scrollToBottom: any;
+}) {
   const [open, setOpen] = useState(false);
   const visibleControls = useAnimationControls();
   const iconControls = useAnimationControls();
@@ -146,7 +153,9 @@ export default function Burger({ halfway }: { halfway: boolean }) {
         animate={paneControls}
         transition={{ duration: 0.75, type: "spring" }}
       >
-        <SlideLink href="/" text="About" />
+        <Link href="/">
+          <SlideLink text="About" />
+        </Link>
       </motion.div>
       <motion.div
         className="fixed left-16 top-48 z-40 text-5xl text-[#ffffff]"
@@ -174,7 +183,9 @@ export default function Burger({ halfway }: { halfway: boolean }) {
         initial="closed"
         animate={paneControls}
       >
-        <SlideLink href="/" text="Resume" />
+        <Link href="/">
+          <SlideLink text="Resume" />
+        </Link>
       </motion.div>
       <motion.div
         className="fixed left-16 top-64 z-40 text-5xl text-[#ffffff]"
@@ -203,7 +214,15 @@ export default function Burger({ halfway }: { halfway: boolean }) {
         animate={paneControls}
         transition={{ duration: 0.75, type: "spring" }}
       >
-        <SlideLink href="/" text="Contact" />
+        <button
+          onClick={() => {
+            handleClick();
+            iconControls.start("burger");
+            scrollToBottom();
+          }}
+        >
+          <SlideLink text="Contact" />
+        </button>
       </motion.div>
     </div>
   );

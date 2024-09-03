@@ -1,8 +1,15 @@
 import { useState, useEffect } from "react";
-import NavLink from "./navlink";
 import { motion, useAnimationControls } from "framer-motion";
+import Link from "next/link";
+import NavLink from "./navlink";
 
-export default function Nav({ start }: { start: boolean }) {
+export default function Nav({
+  start,
+  scrollToBottom,
+}: {
+  start: boolean;
+  scrollToBottom: any;
+}) {
   const controls = useAnimationControls();
 
   useEffect(() => {
@@ -26,9 +33,15 @@ export default function Nav({ start }: { start: boolean }) {
     >
       <div>Eric Manning</div>
       <div className="flex gap-2">
-        <NavLink href="/" text="About" color="#f79c95" />
-        <NavLink href="/" text="Resume" color="#d6d753" />
-        <NavLink href="/" text="Contact" color="#5787a9" />
+        <Link href="/">
+          <NavLink text="About" color="#f79c95" />
+        </Link>
+        <Link href="/">
+          <NavLink text="Resume" color="#d6d753" />
+        </Link>
+        <button onClick={scrollToBottom}>
+          <NavLink text="Contact" color="#5787a9" />
+        </button>
       </div>
     </motion.div>
   );
