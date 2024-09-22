@@ -36,7 +36,7 @@ export default function Nav({
         <Link href="/">
           <NavLink text="About" color="#f79c95" />
         </Link>
-        <Link href="https://docs.google.com/document/d/1CjOSKTJtUvfTQpiVEcvYeJ2_EX5ezGnYvVACqbQ3bJs/edit?usp=sharing">
+        <Link href="https://docs.google.com/document/d/1twyQ_vg1DGgMPYcafVZCkUGH8WGAJqKA/edit?usp=sharing&ouid=118051935442664174489&rtpof=true&sd=true">
           <NavLink text="Resume" color="#d6d753" />
         </Link>
         <button onClick={scrollToBottom}>

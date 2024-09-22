@@ -183,7 +183,7 @@ export default function Burger({
         initial="closed"
         animate={paneControls}
       >
-        <Link href="https://docs.google.com/document/d/1CjOSKTJtUvfTQpiVEcvYeJ2_EX5ezGnYvVACqbQ3bJs/edit?usp=sharing">
+        <Link href="https://docs.google.com/document/d/1twyQ_vg1DGgMPYcafVZCkUGH8WGAJqKA/edit?usp=sharing&ouid=118051935442664174489&rtpof=true&sd=true">
           <SlideLink text="Resume" />
         </Link>
       </motion.div>
