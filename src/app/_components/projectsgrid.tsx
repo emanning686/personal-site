@@ -24,7 +24,7 @@ export default function ProjectsGrid() {
             name="fruit-off"
             icons="javascript vitejs react tailwindcss"
             blurb="Web guessing game about fruit values. Makes API calls for fruit values and images. Built with vite and react, and contains a Spline 3D logo model."
-            href="/"
+            href="https://fruit-off.netlify.app/"
           />
         </motion.div>
         <motion.div
@@ -38,7 +38,7 @@ export default function ProjectsGrid() {
             name="escape"
             icons="python"
             blurb="Python Curses terminal game and level editor with pathfinding. Uses a BFS algorithm for pathing enemies, and subprocess calls for multiple file operations."
-            href="/"
+            href="https://github.com/emanning686/Escape"
           />
         </motion.div>
         <motion.div
@@ -52,7 +52,7 @@ export default function ProjectsGrid() {
             name="countdown-se"
             icons="typescript vitejs react tailwindcss"
             blurb="Site that counts down to December 12 2024. Built with Vite and React as a one day project. Custom background image changes on refresh."
-            href="/"
+            href="https://github.com/emanning686/countdown-se"
           />
         </motion.div>
         <motion.div
@@ -66,7 +66,7 @@ export default function ProjectsGrid() {
             name="planner-tracker"
             icons="java"
             blurb="App that tracks highlights and tasks for each month. Built with Java and JavaFX, following the MVC pattern."
-            href="/"
+            href="https://github.com/emanning686/PlannerTracker"
           />
         </motion.div>
         <motion.div
@@ -80,7 +80,7 @@ export default function ProjectsGrid() {
             name="quizlet-sucks"
             icons="python"
             blurb="Python Curses terminal flash card deck creator, and study tool. Uses menu system for file creation and mode selection, and card animations for actions."
-            href="/"
+            href="https://github.com/emanning686/QuizletSucks"
           />
         </motion.div>
         <motion.div
@@ -94,7 +94,7 @@ export default function ProjectsGrid() {
             name="type-0"
             icons="javascript vitejs react tailwindcss mongodb"
             blurb="Site that checks if a user inputted passcode has been previously entered into the site. Built with Vite and React, uses an Atlas MongoDB database and Vercel for site hosting. A custom Spline 3D numpad displays user input."
-            href="/"
+            href="https://github.com/emanning686/type-0"
           />
         </motion.div>
       </div>
