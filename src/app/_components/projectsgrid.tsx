@@ -40,8 +40,8 @@ export default function ProjectsGrid() {
             blurb="Python Curses terminal game and level editor with pathfinding. Uses a BFS algorithm for pathing enemies, and subprocess calls for multiple file operations."
             href="https://github.com/emanning686/Escape"
           />
-        {/* </motion.div>
-        <motion.div
+        </motion.div>
+        {/* <motion.div
           className="h-auto rounded-xl bg-green-400"
           variants={variants}
           initial="initial"
