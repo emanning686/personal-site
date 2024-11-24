@@ -79,14 +79,16 @@ export default function Technologies({
             viewport={{ amount: 0.75 }}
           >
             <Magnet src="nodejs.svg" resize={true} />
-            <Magnet src="express.svg" resize={true} />
             <Magnet src="react.svg" resize={true} />
-            <Magnet src="nextjs.svg" resize={true} />
-            <Magnet src="vitejs.svg" resize={true} />
-            <Magnet src="tailwindcss.svg" resize={true} />
+            <Magnet src="angularjs.svg" resize={true} />
+            <Magnet src="spring.svg" resize={true} />
             <Magnet src="junit.svg" resize={true} />
             <Magnet src="pytest.svg" resize={true} />
             <Magnet src="postgresql.svg" resize={true} />
+            <Magnet src="tailwindcss.svg" resize={true} />
+            <Magnet src="express.svg" resize={true} />
+            <Magnet src="nextjs.svg" resize={true} />
+            <Magnet src="vitejs.svg" resize={true} />
             <Magnet src="mongodb.svg" resize={true} />
           </motion.div>
           <h2>Tools</h2>

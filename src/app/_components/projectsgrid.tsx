@@ -40,7 +40,7 @@ export default function ProjectsGrid() {
             blurb="Python Curses terminal game and level editor with pathfinding. Uses a BFS algorithm for pathing enemies, and subprocess calls for multiple file operations."
             href="https://github.com/emanning686/Escape"
           />
-        </motion.div>
+        {/* </motion.div>
         <motion.div
           className="h-auto rounded-xl bg-green-400"
           variants={variants}
@@ -53,6 +53,20 @@ export default function ProjectsGrid() {
             icons="typescript vitejs react tailwindcss"
             blurb="Site that counts down to December 12 2024. Built with Vite and React as a one day project. Custom background image changes on refresh."
             href="https://github.com/emanning686/countdown-se"
+          />
+        </motion.div> */}
+        <motion.div
+          className="h-auto rounded-xl bg-green-400"
+          variants={variants}
+          initial="initial"
+          whileInView={"animate"}
+          viewport={{ amount: 0.5 }}
+        >
+          <ProjectLink
+            name="ufund.png"
+            icons="java spring typescript angularjs"
+            blurb="Full stack web application for managing donations and needs for the Sleep in Heavenly Peace foundation. Created for Intro to Software Engineering, using AngularJS and Java-Spring"
+            href="https://github.com/emanning686/"
           />
         </motion.div>
         <motion.div
