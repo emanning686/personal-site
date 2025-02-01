@@ -63,7 +63,7 @@ export default function ProjectsGrid() {
           viewport={{ amount: 0.5 }}
         >
           <ProjectLink
-            name="ufund.png"
+            name="ufund"
             icons="java spring typescript angularjs"
             blurb="Full stack web application for managing donations and needs for the Sleep in Heavenly Peace foundation. Created for Intro to Software Engineering, using AngularJS and Java-Spring"
             href="https://github.com/emanning686/"
